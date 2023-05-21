@@ -35,8 +35,8 @@ def encrypt(file_path):
 
 	# Don't drink and derive
 	derived_key = HKDF(
-	algorithm=hashes.SHA512(),
-	length=32,
+	algorithm=hashes.BLAKE2b(64),
+	length=64,
 	salt=None,
 	info=b'',
 	).derive(shared_secret)
@@ -91,8 +91,8 @@ def decrypt(file_path):
 
 	# Don't drink and derive 
 	derived_key = HKDF(
-	algorithm=hashes.SHA512(),
-	length=32,
+	algorithm=hashes.BLAKE2b(64),
+	length=64,
 	salt=None,
 	info=b'',
 	).derive(shared_secret)
@@ -118,7 +118,7 @@ def main():
 	print("Welcome to PyCryptX v0.0.1. This is only a hobby project. It has not been audited. Don't trust it with important shit.")
 	print("Report any bugs to the GitHub or submit a PR if you're a dev: https://github.com/xannythepleb/PyCryptX")
 	print("This project is something I started to learn more about encryption so help is appreciated.")
-	
+
 	# Prompt for encrypt or decrypt
 	action = input("Do you want to encrypt or decrypt a file? (e/d): ")
 
