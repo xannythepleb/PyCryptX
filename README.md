@@ -22,7 +22,8 @@ You should also **back up any file you use this on!**
 4. Once your keys are generated in a second, run `PyCryptoX.py` and choose if you want to encrypt or decrypt
 5. You can share the X25519 and Ed25519 public keys with anyone. Keep the private keys safe.
 6. You can generate new keys at any time by running the key generation key script again. But this will overwrite your current ones. If you may need them, back them up in another directory first.
-7. To restore old keys, put them in the same directory as the scripts. Don't change the names of the private keys.
+7. To restore old keys, put them in the same directory as the scripts.
+8. Don't change the names of the private keys you are currently using. But you can change the name of backups and of public keys. For example if your friend James sends you his public key you can name it james.pem or james.pub and keep it in the same directory as the scripts.
 
 Report any bugs.
 
