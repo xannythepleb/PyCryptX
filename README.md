@@ -4,13 +4,15 @@ The coninuation of [PyCrypt](https://github.com/xannythepleb/pycrypt), my rudime
 
 Like the original, this is just a hobby project. It is absolutely unaudited and has only been tested on my own machine. If you notice any bugs or potential vulnerabilities, please open an issue or a PR if you're a dev!
 
-PyCryptX uses X25519 for secret key exchange to setup asymemetic encryption, HKDF with SHA512 for key derivation, ChaCha20 for asyemmetic encryption, and in a future update will soon activate Ed25519 for signatures (Ed25519 keys already generated).
+PyCryptX uses X25519 for secret key exchange to setup asymemetic encryption, HKDF with BLAKE2b for 64 byte key derivation, ChaCha20 for asyemmetic encryption, and in a future update will soon activate Ed25519 for signatures (Ed25519 keys already generated).
 
 This software is loosely modelled on PGP and does not offer forward secrecy, but in the future may enable it.
 
 It only uses the Python 3 `cryptography` library and does not have any other dependencies.
 
 Just to make sure this is clear: **this is an unaudited hobby project and should not be used for security essential production environments!**
+
+You should also **back up any file you use this on!**
 
 ## How to use
 
